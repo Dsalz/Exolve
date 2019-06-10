@@ -11,7 +11,11 @@ app.use(express.urlencoded({ extended: true }));
 
 const port = process.env.PORT || 4000;
 
-app.use('/stock', stockRouter);
+const currApiPrefix = '/api/v1';
+
+app.use(`${currApiPrefix}/stock`, stockRouter);
 app.use('/', (req, res) => res.status(404).send({message: 'Invalid Route'}));
 
 app.listen(port, () => console.log(`Serving on port ${port}`))
+
+export default app;

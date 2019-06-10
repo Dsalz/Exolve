@@ -27,7 +27,7 @@ Rest API returning stock exchange data for the US Stock Exchange
 
 ## Api Endpoints
 
-GET `/stock/prices`
+GET `/api/v1/stock/prices`
 
 SUCCESSFULL RESPONSE: {
     "prices": ``Stock Prices``,
@@ -37,6 +37,12 @@ UNSUCCESSFULL RESPONSE: {
     "message":``Descriptive message indicating why the request was unsuccessful``
 }
 
+## Testing
+
+- Run `npm test` to run tests
+
 ## Notes
+
+- Api is versioned hence the `/v1/` in the route
 
 - Keys needed for API call were written plainly in the code for the purposes of this challenge but on a real application it will be stored in environmental variables
