@@ -1,4 +1,8 @@
-# Pali Coding Challenge
+# Exolve Coding Challenge
+
+## About
+
+Rest API returning stock exchange data for the US Stock Exchange
 
 ## Instructions to run
 
@@ -23,16 +27,10 @@
 
 ## Api Endpoints
 
-POST `/meals/least_ingredients`
-
-BODY : { mealIds: [ ``Input Meal Ids in array`` ]}
+GET `/stock/prices`
 
 SUCCESSFULL RESPONSE: {
-    "id": ``Id of meal with least ingredients``,
-    "meal": ``Name of meal with least ingredients``,
-    "ingredients": ``Array of ingredients for meal with least ingredients``,
-    "ingredientNo": ``Number of ingredients for meal with least ingredients``,
-    "message":``Message indicating if the meal is tied with another in the array for least ingredients``
+    "prices": ``Stock Prices``,
 }
 
 UNSUCCESSFULL RESPONSE: {
@@ -41,4 +39,4 @@ UNSUCCESSFULL RESPONSE: {
 
 ## Notes
 
-I tried to cater for all possible edge cases that the platform may face
+- Keys needed for API call were written plainly in the code for the purposes of this challenge but on a real application it will be stored in environmental variables
